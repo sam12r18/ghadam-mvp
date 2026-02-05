@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>خوش‌آمدگویی - گام‌شمار</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f47b25",
+                        "secondary-neon": "#a855f7",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#0f0814",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Vazirmatn';
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Vazirmatn';
+            src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+            font-weight: bold;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Vazirmatn', 'Space Grotesk', sans-serif;
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(244, 123, 37, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
+        }
+        .bg-mesh {
+            background-image:
+                    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(244, 123, 37, 0.1) 0px, transparent 50%);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden bg-mesh">
+    <!-- Top Status Bar Area (iOS Style Spacer) -->
+    <div class="h-12 w-full"></div>
+    <!-- Language/Settings Toggle (Top End) -->
+    <div class="flex items-center px-6 py-2 justify-start">
+        <button class="flex items-center justify-center rounded-full bg-white/10 p-2 backdrop-blur-md">
+            <span class="material-symbols-outlined text-white">settings</span>
+        </button>
+    </div>
+    <!-- Main Content Container -->
+    <div class="flex flex-1 flex-col items-center justify-center px-6 @container">
+        <!-- Hero Illustration Container -->
+        <div class="relative w-full max-w-sm mb-12 flex justify-center">
+            <!-- Decorative Glow Blobs -->
+            <div class="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-primary/20 blur-[60px]"></div>
+            <div class="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-secondary-neon/20 blur-[60px]"></div>
+            <!-- Main Image -->
+            <div class="relative z-10 w-full aspect-square flex items-center justify-center">
+                <div class="w-full h-full bg-cover bg-center rounded-xl neon-glow border border-white/10" data-alt="Neon glowing orange sneaker on dark background" style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMV3HOMpGItBZ8XaGiQlyf-eSjrfRisaDm60XpLMS_0gE_tFwrc3dJin73xsmL_nMCVjITSnk5jp_lOoMabtfgZqv_rFvsnR_jkRWWnedQ0XwK_OoBm4fpBBWtmwUjissmSAcimpPcEtlTFNFZBgDIjRoZPi93FicaqwJ3lquXqHMPkmYJBc5X-cO4xsoWqhY75AbRnMUgpk3rV8-Qc_UYzmlV682PY8O0213r1R9SdXOWx4qTlO35nI4D_ZYeiwPJJj-eiDmqc0w");'>
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-4 right-4 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-lg flex items-center gap-3 shadow-2xl">
+                    <div class="bg-primary p-2 rounded-full">
+                        <span class="material-symbols-outlined text-white text-sm">bolt</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-white/60">کالری مصرفی</span>
+                        <span class="text-sm font-bold text-white font-display">420 kcal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Typography Section -->
+        <div class="text-center space-y-4 max-w-md">
+            <h1 class="text-white text-4xl font-bold leading-tight tracking-tight drop-shadow-sm">
+                به مسیر سلامتی <span class="text-primary">خوش آمدید</span>
+            </h1>
+            <p class="text-white/70 text-lg font-normal leading-relaxed px-2">
+                قدم‌هایت را بشمار، مسیرهای جدید را کشف کن و به اندام ایده‌آل خود برس
+            </p>
+        </div>
+        <!-- Progress Indicators (Dots) -->
+        <div class="flex w-full flex-row items-center justify-center gap-2.5 py-10">
+            <div class="h-1.5 w-8 rounded-full bg-primary"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+        </div>
+    </div>
+    <!-- Action Section (Bottom) -->
+    <div class="w-full px-6 pb-12 pt-4">
+        <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold text-xl py-5 rounded-full shadow-[0_10px_30px_rgba(244,123,37,0.3)] transition-all active:scale-95 flex items-center justify-center gap-3">
+            <span>شروع کنید</span>
+            <span class="material-symbols-outlined text-2xl">arrow_back</span>
+        </button>
+        <p class="text-center mt-6 text-white/40 text-sm">
+            قبلاً عضو شده‌اید؟ <a class="text-white hover:text-primary transition-colors underline underline-offset-4" href="#">وارد شوید</a>
+        </p>
+    </div>
+    <!-- Decorative Map Background Element (Subtle) -->
+    <div class="absolute bottom-0 left-0 w-full h-64 opacity-10 pointer-events-none grayscale invert" data-alt="Subtle abstract city map pattern" data-location="Tehran" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn8nU6SeHC1jyvL_Ei3zH8O0Iz5xbGS-IDMsGOHxRfkXeKoh1BGAbKoUrERPcDhnRLwzx6RUUZzE5m6V9lXDxun0xjd2N9TEjM6bNqI_e-Ntoqdlv3v8M0yLFdNhtyJXGFfYley2zKK2XHR8zAzbAV9MZbhyLtU1f46tAFKi5S2OzvSxgKzy1gJh_yaK9ExJ2DKYXUtrp8N9AGc23gbkekhzgSIHsQUYzTjEt9hjllaR1j0txhUNt-eFXPsrNbHxOT_P0VPWGJwhE"); background-repeat: no-repeat; background-size: cover;'>
+    </div>
+</div>
+</body></html>
