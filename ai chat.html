@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8c25f4",
+            "accent-orange": "#ff8c00",
+            "background-light": "#f7f5f8",
+            "background-dark": "#0a0510",
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "system-ui", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'Vazirmatn';
+      src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2') format('woff2');
+    }
+    body {
+      font-family: 'Vazirmatn', 'Space Grotesk', sans-serif;
+      background-color: #0a0510;
+    }
+    .neon-glow-purple {
+      box-shadow: 0 0 15px rgba(140, 37, 244, 0.4);
+    }
+    .neon-glow-orange {
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+    }
+    .glass-panel {
+      background: rgba(25, 16, 34, 0.8);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(140, 37, 244, 0.2);
+    }
+    .ios-keyboard-bg {
+      background: #1c1c1e;
+    }
+    .ios-key {
+      background: #3a3a3c;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white overflow-hidden">
+<!-- Main Container (Phone Form Factor) -->
+<div class="relative flex h-screen w-full flex-col max-w-[430px] mx-auto bg-background-dark shadow-2xl overflow-hidden border-x border-primary/10">
+  <!-- Status Bar -->
+  <div class="flex items-center justify-between px-6 pt-4 pb-2 text-xs font-bold">
+    <span class="font-display">9:41</span>
+    <div class="flex items-center gap-1.5">
+      <span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+      <span class="material-symbols-outlined text-[16px]">wifi</span>
+      <span class="material-symbols-outlined text-[20px]">battery_full</span>
+    </div>
+  </div>
+  <!-- Top Navigation -->
+  <div class="flex items-center px-4 py-2 justify-between">
+    <button class="text-white/60 p-2">
+      <span class="material-symbols-outlined">arrow_forward_ios</span>
+    </button>
+    <h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">راه‌اندازی حساب کاربری</h2>
+    <div class="w-10"></div>
+  </div>
+  <!-- Progress Indicator -->
+  <div class="px-6 py-2">
+    <div class="flex justify-between items-center mb-1 text-[10px] text-primary font-bold">
+      <span>تکمیل پروفایل</span>
+      <span class="font-display">25%</span>
+    </div>
+    <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+      <div class="h-full bg-primary rounded-full neon-glow-purple" style="width: 25%;"></div>
+    </div>
+  </div>
+  <!-- Chat Area -->
+  <div class="flex-1 overflow-y-auto p-4 space-y-6 flex flex-col pt-8">
+    <!-- AI Message -->
+    <div class="flex items-start gap-3 max-w-[85%] self-start">
+      <div class="relative shrink-0">
+        <div class="size-10 rounded-full bg-gradient-to-br from-primary to-purple-400 p-[2px] neon-glow-purple">
+          <div class="bg-background-dark rounded-full w-full h-full flex items-center justify-center overflow-hidden">
+            <img class="w-full h-full object-cover" data-alt="AI smart coach avatar with neon glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOtCrNPZavp0Pq2ugTR3ryo7SOHZuceQTEKd8euEb2ia4c-Z7FWmyQ9VxtjZYk2OiWTZ0jdRP_bv3BdtUSikiKvTnRfyiH2Sgff2yz3lYvUZBdFy5dx8rVKatYKhnoIDixkrT89ZIOSGNBM9c5YwyQgDGwQt7wVs25c--MA4ulg7gus0rRJ6rHLgzU-_vzKmb3TbLS4OKoeNNyYXD34QRASA9o8cC6sw5ePft1Oj5t2UbuDMQ-8EbjeSa1TaHqITZ61JIpZWlhEMA"/>
+          </div>
+        </div>
+        <div class="absolute -bottom-0.5 -right-0.5 size-3 bg-green-500 rounded-full border-2 border-background-dark"></div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] text-primary font-medium mr-2">مربی هوشمند</span>
+        <div class="bg-primary/20 border border-primary/30 text-white p-4 rounded-2xl rounded-tr-none neon-glow-purple">
+          <p class="text-sm leading-relaxed">سلام! من مربی هوشمند شما هستم. برای شروع، نام، سن و وزنت رو به من بگو.</p>
+        </div>
+        <span class="text-[10px] text-white/30 mr-2 mt-1 font-display">10:12 AM</span>
+      </div>
+    </div>
+    <!-- User Message Example (Mockup) -->
+    <div class="flex items-start gap-3 max-w-[85%] self-end flex-row-reverse">
+      <div class="shrink-0">
+        <div class="size-10 rounded-full bg-gradient-to-br from-accent-orange to-orange-400 p-[2px] neon-glow-orange">
+          <div class="bg-background-dark rounded-full w-full h-full flex items-center justify-center overflow-hidden">
+            <img class="w-full h-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh7WkLtNF4PnTwg59Xk6c70dpTFEddyBN4DfiRwUwOSdmBVmg5eIqOyV691UXfYqESpfcBS8tF_919V8JvTHYjZvFwZRPbiPBYSAdex7ISkUxtJki3LYx35UOxD5e97S2tLsmcq3L7dfmuvPzKqzJfWdc1ziU_MumVl5Y7Th9kpiw2IeC3r2Sj56y7DHSCMdeG6WcKP9fGSwafEMy-hyoxn9Eab175p_I4lkcd4AL-LcpUXjbTwlUrAvluSmpC6Jr56ve14E-hYQI"/>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1 items-end">
+        <span class="text-[11px] text-accent-orange font-medium ml-2">شما</span>
+        <div class="bg-accent-orange text-background-dark font-bold p-4 rounded-2xl rounded-tl-none neon-glow-orange">
+          <p class="text-sm leading-relaxed">سلام، من علی هستم، ۲۸ ساله و ۸۰ کیلوگرم.</p>
+        </div>
+        <span class="text-[10px] text-white/30 ml-2 mt-1 font-display">10:13 AM</span>
+      </div>
+    </div>
+    <!-- Second AI Message -->
+    <div class="flex items-start gap-3 max-w-[85%] self-start">
+      <div class="size-10 rounded-full bg-gradient-to-br from-primary to-purple-400 p-[2px] neon-glow-purple shrink-0">
+        <div class="bg-background-dark rounded-full w-full h-full flex items-center justify-center overflow-hidden">
+          <img class="w-full h-full object-cover" data-alt="AI smart coach avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHiNVxcykQzXynODYP1rfF5KQb2Nf8a1lmPrZME03IfMo7JpuL9d-pW_kFjwxsWMVxAMk5C9MV3OuE9bqG9H5pyXiGCVRTKjudsLEzJWNshiZpBz0BM0CBpPvutuIjL1WbofamnXPaSMo78LJs4bu8L4hbfUxu56LsgBf8lGNA-EnrasgGN1SE24NoWbfYG8XKYbgEpNwqSiP0-7mJD2PNulO9XIyOFIadM2Nk93OK2bKp9mRqkC1EdCGCErALPlmYKVBbZiQVH0w"/>
+        </div>
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-[11px] text-primary font-medium mr-2">مربی هوشمند</span>
+        <div class="bg-primary/20 border border-primary/30 text-white p-4 rounded-2xl rounded-tr-none neon-glow-purple">
+          <p class="text-sm leading-relaxed">عالیه علی جان! خوشحالم که اینجایی. بر اساس اطلاعاتت، یک برنامه پیاده‌روی شخصی‌سازی شده برات آماده می‌کنم. هدفت چیه؟</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Input Section -->
+  <div class="glass-panel p-4 pb-2">
+    <div class="flex items-center gap-3 bg-white/5 rounded-xl border border-white/10 px-4 h-12">
+      <button class="text-accent-orange">
+        <span class="material-symbols-outlined">add_circle</span>
+      </button>
+      <input class="bg-transparent border-none focus:ring-0 text-sm flex-1 placeholder:text-white/20 text-white" placeholder="اینجا بنویسید..." type="text"/>
+      <button class="bg-primary size-8 rounded-lg flex items-center justify-center neon-glow-purple">
+        <span class="material-symbols-outlined text-white text-[20px]">arrow_back</span>
+      </button>
+    </div>
+  </div>
+  <!-- iOS Persian Keyboard Mockup -->
+  <div class="ios-keyboard-bg w-full p-1.5 pt-3 pb-8 space-y-3">
+    <!-- Row 1 -->
+    <div class="flex justify-center gap-1.5 px-1">
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ض</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ص</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ث</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ق</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ف</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">غ</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ع</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ه</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">خ</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ح</div>
+    </div>
+    <!-- Row 2 -->
+    <div class="flex justify-center gap-1.5 px-4">
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ش</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">س</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ی</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ب</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ل</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ا</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ت</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ن</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">م</div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ک</div>
+    </div>
+    <!-- Row 3 -->
+    <div class="flex justify-between gap-1.5 px-1">
+      <div class="bg-[#acacac]/20 w-11 h-11 rounded-md flex items-center justify-center">
+        <span class="material-symbols-outlined text-[20px]">shift</span>
+      </div>
+      <div class="flex-1 flex gap-1.5">
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ظ</div>
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ط</div>
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ز</div>
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ر</div>
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">ذ</div>
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">د</div>
+        <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-lg">و</div>
+      </div>
+      <div class="bg-[#acacac]/20 w-11 h-11 rounded-md flex items-center justify-center">
+        <span class="material-symbols-outlined text-[20px]">backspace</span>
+      </div>
+    </div>
+    <!-- Row 4 -->
+    <div class="flex justify-between gap-1.5 px-1">
+      <div class="bg-[#acacac]/20 w-20 h-11 rounded-md flex items-center justify-center text-sm font-display">123</div>
+      <div class="bg-[#acacac]/20 w-11 h-11 rounded-md flex items-center justify-center">
+        <span class="material-symbols-outlined text-[20px]">emoji_emotions</span>
+      </div>
+      <div class="ios-key flex-1 h-11 rounded-md flex items-center justify-center text-sm">فاصله</div>
+      <div class="bg-primary w-24 h-11 rounded-md flex items-center justify-center text-sm font-bold">تایید</div>
+    </div>
+    <!-- Home Indicator -->
+    <div class="flex justify-center pt-2">
+      <div class="w-32 h-1.5 bg-white/20 rounded-full"></div>
+    </div>
+  </div>
+</div>
+</body></html>

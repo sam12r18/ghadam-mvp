@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="fa"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f27f0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#0a0510",
+                        "neon-purple": "#4d1d95",
+                        "accent-purple": "#1a0b2e",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0a0510;
+        }
+        .neon-glow-orange {
+            box-shadow: 0 0 15px rgba(242, 127, 13, 0.4), 0 0 30px rgba(242, 127, 13, 0.2);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 20px rgba(77, 29, 149, 0.3);
+        }
+        .step-ring {
+            background: conic-gradient(#f27f0d 65%, transparent 0);
+        }
+        .glass-nav {
+            background: rgba(26, 11, 46, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-white min-h-screen font-display">
+<!-- Top Navigation Bar -->
+<div class="flex items-center justify-between p-6 pt-12">
+    <div class="flex items-center gap-2 bg-accent-purple/60 border border-white/10 rounded-full px-4 py-2 neon-glow-purple">
+        <span class="material-symbols-outlined text-primary text-xl">account_balance_wallet</span>
+        <p class="text-primary text-sm font-bold leading-normal">موجودی: ۱۲۰,۰۰۰ تومان</p>
+    </div>
+    <div class="size-12 rounded-full border border-white/10 flex items-center justify-center bg-accent-purple/40">
+        <span class="material-symbols-outlined text-white">notifications</span>
+    </div>
+</div>
+<!-- Main Content Container -->
+<div class="flex flex-col items-center px-6 gap-8 pb-32">
+    <!-- Step Counter Ring -->
+    <div class="relative flex items-center justify-center mt-4">
+        <!-- Progress Ring Background -->
+        <div class="size-64 rounded-full border-[10px] border-white/5 flex items-center justify-center">
+            <!-- Inner Content -->
+            <div class="flex flex-col items-center text-center">
+                <p class="text-white/60 text-sm font-medium">گام‌های امروز</p>
+                <h1 class="text-5xl font-bold mt-1 text-white">۸,۵۴۳</h1>
+                <div class="mt-4 flex flex-col items-center">
+                    <span class="text-primary text-xs font-bold bg-primary/10 px-3 py-1 rounded-full uppercase tracking-widest">۶۵٪ از هدف</span>
+                </div>
+            </div>
+        </div>
+        <!-- Progress Arc (Simulated with SVG) -->
+        <svg class="absolute size-64 -rotate-90">
+            <circle class="drop-shadow-[0_0_8px_rgba(242,127,13,0.8)]" cx="128" cy="128" fill="none" r="119" stroke="#f27f0d" stroke-dasharray="747" stroke-dashoffset="261" stroke-linecap="round" stroke-width="10"></circle>
+        </svg>
+    </div>
+    <!-- Quick Stats Grid -->
+    <div class="grid grid-cols-2 gap-4 w-full">
+        <div class="bg-accent-purple/40 border border-white/5 p-4 rounded-xl flex items-center gap-3">
+            <div class="bg-primary/20 p-2 rounded-lg">
+                <span class="material-symbols-outlined text-primary">distance</span>
+            </div>
+            <div>
+                <p class="text-white/40 text-xs">مسافت</p>
+                <p class="text-white font-bold">۵.۲ کیلومتر</p>
+            </div>
+        </div>
+        <div class="bg-accent-purple/40 border border-white/5 p-4 rounded-xl flex items-center gap-3">
+            <div class="bg-orange-500/20 p-2 rounded-lg">
+                <span class="material-symbols-outlined text-orange-500">local_fire_department</span>
+            </div>
+            <div>
+                <p class="text-white/40 text-xs">کالری</p>
+                <p class="text-white font-bold">۳۴۰ کالری</p>
+            </div>
+        </div>
+    </div>
+    <!-- Start Walking Button -->
+    <div class="w-full mt-2">
+        <button class="w-full py-5 bg-primary text-background-dark rounded-full font-bold text-xl flex items-center justify-center gap-3 neon-glow-orange active:scale-95 transition-transform duration-100">
+            <span class="material-symbols-outlined text-3xl">play_circle</span>
+            <span>شروع پیاده‌روی</span>
+        </button>
+        <p class="text-white/40 text-center text-xs mt-4">با هر ۱۰۰۰ قدم ۵۰۰ تومان هدیه بگیرید</p>
+    </div>
+    <!-- Route Suggestions Section -->
+    <div class="w-full">
+        <div class="flex items-center justify-between mb-4">
+            <h3 class="text-white text-lg font-bold">مسیرهای پیشنهادی</h3>
+            <span class="text-primary text-sm">مشاهده همه</span>
+        </div>
+        <div class="flex overflow-x-auto gap-4 pb-4 snap-x rtl:flex-row-reverse" style="scrollbar-width: none;">
+            <!-- Card 1 -->
+            <div class="min-w-[280px] bg-accent-purple/40 border border-white/5 rounded-2xl overflow-hidden snap-start">
+                <div class="h-32 bg-cover bg-center" data-alt="یک مسیر پیاده روی سرسبز در پارک محلی" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvJee_hoy8GKYNfOygxjtG8mdVbQNishYa0sYiW9ujQranJqx2glbJ4G564vYvrVrkamOd6ON__Yx2IFZ2Q2_CTcdvfdq6T31cpJkvt3iwc-tNcasH-x6jaUI9-1ospWeT4Gust8xLrQFotEZAX61q3amEmarCz2ue7YZgjeOZJnfpXeSmxBYPTh5AXUDib97Qj5KVZG4oQBnkrZlsQA4wu5jpvj0LoQm0O1LfoGC-dcddnbOI_lpSHN1b0-zACDZ8G-2k7RcVg-8')"></div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <p class="text-white font-bold">بوستان آب و آتش</p>
+                        <span class="text-primary text-xs font-bold">۴.۲ کیلومتر</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="material-symbols-outlined text-white/40 text-sm">location_on</span>
+                        <p class="text-white/40 text-xs" data-location="Tehran">تهران، عباس‌آباد</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="min-w-[280px] bg-accent-purple/40 border border-white/5 rounded-2xl overflow-hidden snap-start">
+                <div class="h-32 bg-cover bg-center" data-alt="مسیر پیاده روی مدرن شهری با نورپردازی" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB05xSIf6oPJ5aF4V3B9r2fkaF-VSvBWMpq0Xeju4NtasjYBUUahJOuOAWh6qMm6olIOm7ZLxA065Qi7GFqDwrTnhwNJM2S6tQzE2w4p_aIi__m_3AaLo_bOMRuMu-aIMaClQVX50kNOQoMgIUfWTw4fn22JnExJ0VHoaMrF-LWsHjy5Tkoz7glRO64-AmowW_4al3XMEJyWQB50Ixj8ld6RHF-Ym4I8NhOH0Gg_TJ3LKlG-DrD44P-gZ24CcMFcblOoClgVEUB2D8')"></div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start">
+                        <p class="text-white font-bold">بلوار ولیعصر</p>
+                        <span class="text-primary text-xs font-bold">۲.۸ کیلومتر</span>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="material-symbols-outlined text-white/40 text-sm">location_on</span>
+                        <p class="text-white/40 text-xs" data-location="Tehran">تهران، میدان ونک</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-6 left-6 right-6 h-20 glass-nav rounded-full border border-white/10 flex items-center justify-around px-4 z-50">
+    <div class="flex flex-col items-center gap-1 text-primary">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+        <span class="text-[10px] font-bold">خانه</span>
+    </div>
+    <div class="flex flex-col items-center gap-1 text-white/40">
+        <span class="material-symbols-outlined">explore</span>
+        <span class="text-[10px] font-bold">کاوش</span>
+    </div>
+    <div class="flex flex-col items-center gap-1 text-white/40">
+        <span class="material-symbols-outlined">history</span>
+        <span class="text-[10px] font-bold">تاریخچه</span>
+    </div>
+    <div class="flex flex-col items-center gap-1 text-white/40">
+        <span class="material-symbols-outlined">person</span>
+        <span class="text-[10px] font-bold">پروفایل</span>
+    </div>
+</div>
+</body></html>

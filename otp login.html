@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<html class="dark" dir="rtl" lang="fa"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f26c0d",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#1a0b2e", // Deep neon purple variant
+                        "neon-purple": "#8b5cf6",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    boxShadow: {
+                        'neon-orange': '0 0 15px rgba(242, 108, 13, 0.4)',
+                        'neon-purple': '0 0 15px rgba(139, 92, 246, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', 'Tahoma', sans-serif;
+        }
+        .otp-input {
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .neon-glow-border {
+            border: 1px solid rgba(242, 108, 13, 0.5);
+            box-shadow: 0 0 10px rgba(242, 108, 13, 0.2);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(242, 108, 13, 0.15) 0px, transparent 50%),
+            radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display">
+<!-- Top Navigation Bar -->
+<div class="flex items-center justify-between p-6 pt-12">
+    <button class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+        <span class="material-symbols-outlined text-white">chevron_right</span>
+    </button>
+    <div class="w-10 h-10"></div> <!-- Spacer -->
+</div>
+<!-- Main Content Container -->
+<div class="flex-1 px-8 pb-12 bg-mesh">
+    <!-- Welcome Header -->
+    <div class="mt-8 mb-12">
+        <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 mb-6 shadow-neon-orange border border-primary/30">
+            <span class="material-symbols-outlined text-primary text-4xl">directions_walk</span>
+        </div>
+        <h1 class="text-3xl font-bold leading-tight mb-3">ورود یا ثبت‌نام</h1>
+        <p class="text-slate-400 text-lg">برای شروع قدم زدن، شماره موبایل خود را وارد کنید</p>
+    </div>
+    <!-- Phone Input Section -->
+    <div class="space-y-6">
+        <div class="relative">
+            <label class="block text-sm font-medium text-slate-400 mb-2 mr-1">شماره موبایل</label>
+            <div class="flex items-center bg-white/5 border border-white/10 rounded-xl px-4 py-1 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/30 transition-all shadow-inner">
+                <span class="material-symbols-outlined text-slate-500 ml-3">smartphone</span>
+                <input class="w-full bg-transparent border-none focus:ring-0 text-xl py-3 text-left tracking-[0.2em] font-display text-white placeholder:text-slate-600" dir="ltr" placeholder="۰۹---------" type="tel"/>
+            </div>
+        </div>
+        <!-- Action Button -->
+        <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-neon-orange transition-all flex items-center justify-center gap-2 text-lg active:scale-[0.98]">
+            <span>دریافت کد تایید</span>
+            <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+    </div>
+    <!-- Divider -->
+    <div class="relative my-12">
+        <div aria-hidden="true" class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-white/10"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+            <span class="px-4 bg-background-dark text-slate-500">کد تایید ۴ رقمی</span>
+        </div>
+    </div>
+    <!-- OTP Input Section -->
+    <div class="space-y-8">
+        <div class="flex justify-center gap-4" dir="ltr">
+            <input class="otp-input w-16 h-16 bg-white/5 border-2 border-primary/30 rounded-xl text-2xl font-bold text-white shadow-neon-orange focus:border-primary focus:ring-0 transition-all" maxlength="1" type="text"/>
+            <input class="otp-input w-16 h-16 bg-white/5 border border-white/10 rounded-xl text-2xl font-bold text-white focus:border-neon-purple focus:ring-0 transition-all" maxlength="1" type="text"/>
+            <input class="otp-input w-16 h-16 bg-white/5 border border-white/10 rounded-xl text-2xl font-bold text-white focus:border-neon-purple focus:ring-0 transition-all" maxlength="1" type="text"/>
+            <input class="otp-input w-16 h-16 bg-white/5 border border-white/10 rounded-xl text-2xl font-bold text-white focus:border-neon-purple focus:ring-0 transition-all" maxlength="1" type="text"/>
+        </div>
+        <div class="text-center space-y-4">
+            <p class="text-slate-400 text-sm">
+                کد را دریافت نکردید؟
+                <button class="text-primary font-bold mr-1">ارسال مجدد (۵۹ ثانیه)</button>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Footer Decoration -->
+<div class="px-8 pb-10">
+    <div class="relative h-32 w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity" data-alt="Abstract fitness person walking in neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7-7z86do1_PbMPJ0N4rSc9qsN6hK66p_72sY4Oi93E2Gtr4olSFrVbt5xDz3vE9QK5wdiaDnr0yMlXqyukBE0E5E7sXs6b8NezPqAE4azmsyHlJQBm8yqqoXoIY-Y01EDVH6YjRqMkgaqSDgprtjET3V_nOM4EZIqPcfH3RwcRQOanHsFavNXHbblsL1lCeeZdrrhlqPOQUmsyKTuWT6uM9Oqk_t0FZnYtgwHYs1v16zSLkNSKLkBdhIVd9KP68VM_WD5mis5YyY"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
+        <div class="absolute bottom-4 right-4 flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-neon-orange"></div>
+            <span class="text-xs text-slate-300 font-medium">۱,۴۳۲ نفر هم‌اکنون در حال پیاده‌روی هستند</span>
+        </div>
+    </div>
+</div>
+</body></html>
