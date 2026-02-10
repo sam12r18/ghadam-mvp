@@ -1,0 +1,260 @@
+/* public/css/neumorphism.css */
+body {
+    background-color: #e0e5ec;
+    font-family: IRANSans, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+}
+
+.card-neumorphic {
+    background: #e0e5ec; /* رنگ روشن Neumorphic */
+    border-radius: 12px;
+    padding: 20px;       /* فاصله داخلی */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15),
+    -5px -5px 15px rgba(255,255,255,0.7);
+    width: 100%;         /* عرض کامل */
+    max-width: 100%;     /* جلوگیری از کوچک شدن */
+    box-sizing: border-box; /* شامل padding در عرض */
+    margin: 20px; /* فاصله با جدول */
+}
+
+/* Select Neumorphic هماهنگ با input های شما */
+.neumorphic-select {
+    background: #efefef; /* مثل input */
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.6),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+    padding: 12px 16px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #333;
+    appearance: auto;       /* فلش پیشفرض */
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.neumorphic-select:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.8),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    background: #ffffff;
+}
+
+/* ردیف فرم افقی */
+.form-row-neumorphic {
+    display: flex;
+    gap: 16px;          /* فاصله بین فیلدها */
+    flex-wrap: wrap;     /* واکنشگرا */
+    align-items: center; /* وسط چین عمودی */
+}
+
+/* ستون‌ها */
+.form-row-neumorphic > .form-group {
+    flex: 1;            /* همه مساوی */
+    min-width: 150px;   /* حداقل عرض */
+}
+
+/* دکمه‌ها همون کلاس خودت */
+.neumorphic {
+    background: #e0e5ec;
+    border-radius: 20px;
+    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+}
+
+.neumorphic-input {
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.6),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+    padding: 12px 16px;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.neumorphic-input:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.8),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    background: #ffffff;
+
+}
+
+/* دکمه اصلی (خاکستری/پیش‌فرض) */
+.neumorphic-btn {
+    background: #e0e5ec;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.6),
+    -6px -6px 12px rgba(255, 255, 255, 0.5);
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.neumorphic-btn:hover {
+    box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.7),
+    -4px -4px 8px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.neumorphic-btn:active {
+    box-shadow: inset 6px 6px 12px rgba(163, 177, 198, 0.6),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.5);
+    transform: translateY(1px);
+}
+
+
+/* کارت جدول */
+.table-neumorphic {
+    background: #e0e5ec;
+    border-radius: 16px;
+    box-shadow: 8px 8px 16px rgba(163, 177, 198, 0.6),
+    -8px -8px 16px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+/* خود جدول */
+.table-neumorphic table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.95rem;
+}
+
+/* هدر جدول */
+.table-neumorphic th {
+    background: #e0e5ec;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    box-shadow: inset 2px 2px 5px rgba(163,177,198,0.4),
+    inset -2px -2px 5px rgba(255,255,255,0.6);
+    border-radius: 10px 10px 0 0;
+}
+
+/* سلول‌ها */
+.table-neumorphic td {
+    background: #e0e5ec;
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: inset 1px 1px 3px rgba(163,177,198,0.2),
+    inset -1px -1px 3px rgba(255,255,255,0.5);
+    transition: background 0.2s ease;
+}
+
+/* ردیف یکی در میون */
+.table-neumorphic tbody tr:nth-child(odd) td {
+    background: #e5e9f0;
+}
+
+/* هاور ردیف */
+.table-neumorphic tbody tr:hover td {
+    background: #dbe1e8;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 4px rgba(163,177,198,0.4),
+    inset -1px -1px 4px rgba(255,255,255,0.6);
+}
+
+/* آخرین ردیف بدون خط */
+.table-neumorphic tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badge Neumorphic داخل جدول */
+.badge-neumorphic {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 3px 3px 8px rgba(163,177,198,0.4),
+    -3px -3px 8px rgba(255,255,255,0.5);
+    transition: all 0.2s ease;
+}
+.badge-neumorphic-success {
+    background: #d4f4dd;
+    color: #1e5c2e;
+}
+.badge-neumorphic-warning {
+    background: #fff3cd;
+    color: #856404;
+}
+.badge-neumorphic-danger {
+    background: #ffd1d1;
+    color: #721c24;
+}
+
+
+/* ────────────── دکمه سبز (Success / تایید) ────────────── */
+.neumorphic-btn-success {
+    background: linear-gradient(145deg, #d4f4dd, #a8e6bf); /* سبز خیلی ملایم */
+    color: #1e5c2e;
+    box-shadow: 6px 6px 12px #c3d9c8,
+    -6px -6px 12px #ffffff;
+}
+
+.neumorphic-btn-success:hover {
+    background: linear-gradient(145deg, #c8f0d4, #9cdab0);
+    box-shadow: 4px 4px 8px #b3d0bd,
+    -4px -4px 8px #ffffff;
+    transform: translateY(-2px);
+}
+
+.neumorphic-btn-success:active {
+    background: linear-gradient(145deg, #b8e8c4, #8ccaa0);
+    box-shadow: inset 6px 6px 12px #c3d9c8,
+    inset -6px -6px 12px #ffffff;
+    transform: translateY(2px);
+}
+
+/* ────────────── دکمه قرمز (Danger / لغو / حذف) ────────────── */
+.neumorphic-btn-danger {
+    background: linear-gradient(145deg, #ffd1d1, #ffaaaa); /* قرمز خیلی ملایم */
+    color: #721c24;
+    box-shadow: 6px 6px 12px #e0c0c0,
+    -6px -6px 12px #ffffff;
+}
+
+.neumorphic-btn-danger:hover {
+    background: linear-gradient(145deg, #ffc4c4, #ff9999);
+    box-shadow: 4px 4px 8px #d0b0b0,
+    -4px -4px 8px #ffffff;
+    transform: translateY(-2px);
+}
+
+.neumorphic-btn-danger:active {
+    background: linear-gradient(145deg, #ffb3b3, #ff8888);
+    box-shadow: inset 6px 6px 12px #e0c0c0,
+    inset -6px -6px 12px #ffffff;
+    transform: translateY(2px);
+}
+
+/* برای دکمه‌های بلوکی کامل عرض */
+.neumorphic-btn-block {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+}
