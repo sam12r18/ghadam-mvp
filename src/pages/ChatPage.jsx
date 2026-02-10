@@ -362,10 +362,10 @@ function ChatPage() {
   };
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-white overflow-hidden">
-      <div className="relative flex h-screen w-full flex-col bg-background-dark shadow-2xl overflow-hidden border-x border-primary/10">
+    <div className="bg-background-light text-slate-900 overflow-hidden">
+      <div className="relative flex h-screen w-full flex-col bg-background-light shadow-xl overflow-hidden border-x border-slate-100">
         <div className="flex items-center justify-between px-6 pt-4 pb-2 text-xs font-bold">
-          <span className="font-display">9:41</span>
+          <span className="font-display text-slate-600">9:41</span>
           <div className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
             <span className="material-symbols-outlined text-[16px]">wifi</span>
@@ -373,10 +373,10 @@ function ChatPage() {
           </div>
         </div>
         <div className="flex items-center px-4 py-2 justify-between">
-          <button className="text-white/60 p-2">
+          <button className="text-slate-500 p-2">
             <span className="material-symbols-outlined">arrow_forward_ios</span>
           </button>
-          <h2 className="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">
+          <h2 className="text-slate-900 text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">
             راه‌اندازی حساب کاربری
           </h2>
           <div className="w-10" />
@@ -440,11 +440,11 @@ function ChatPage() {
           <div ref={messagesEndRef} />
         </div>
         <div className="glass-panel p-4 pb-2">
-          <div className="flex items-center gap-3 bg-white/5 rounded-xl border border-white/10 px-4 h-12">
+          <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 h-12 bg-background-light">
             {step === 'gender' ? (
               <>
-                <div className="flex items-center gap-4 flex-1 text-xs">
-                  <label className="flex items-center gap-1 cursor-pointer">
+                <div className="flex items-center gap-4 flex-1 text-xs text-slate-900">
+                  <label className="flex items-center gap-1 cursor-pointer text-slate-900">
                     <input
                       type="radio"
                       name="gender"
@@ -455,7 +455,7 @@ function ChatPage() {
                     />
                     <span>زن</span>
                   </label>
-                  <label className="flex items-center gap-1 cursor-pointer">
+                  <label className="flex items-center gap-1 cursor-pointer text-slate-900">
                     <input
                       type="radio"
                       name="gender"
