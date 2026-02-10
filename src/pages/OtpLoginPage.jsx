@@ -1,9 +1,32 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function OtpLoginPage() {
   const navigate = useNavigate();
+  const [phone, setPhone] = useState('');
+
+  const handlePhoneChange = (event) => {
+    const persianDigits = '۰۱۲۳۴۵۶۷۸۹';
+    let value = event.target.value || '';
+
+    value = value
+      .split('')
+      .map((ch) => {
+        const idx = persianDigits.indexOf(ch);
+        if (idx !== -1) return String(idx);
+        if (/[0-9]/.test(ch)) return ch;
+        return '';
+      })
+      .join('');
+
+    if (value.length > 11) {
+      value = value.slice(0, 11);
+    }
+
+    setPhone(value);
+  };
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display">
+    <div className="bg-background-light text-slate-900 min-h-screen flex flex-col font-display">
       <div className="flex items-center justify-end p-6 pt-12">
         <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
           <span className="material-symbols-outlined text-white">chevron_right</span>
@@ -23,13 +46,17 @@ function OtpLoginPage() {
         <div className="space-y-6">
           <div className="relative">
             <label className="block text-sm font-medium text-slate-400 mb-2 mr-1 text-end">شماره موبایل</label>
-            <div className="flex items-center bg-white/5 border border-white/10 rounded-xl px-4 py-1 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/30 transition-all shadow-inner">
+            <div className="flex items-center neo-surface-inset border border-slate-200 px-4 py-1 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/30 transition-all">
               <span className="material-symbols-outlined text-slate-500 ml-3">smartphone</span>
               <input
-                className="w-full bg-transparent border-none focus:ring-0 text-xl py-3 text-left tracking-[0.2em] font-display text-white placeholder:text-slate-600"
+                className="w-full bg-transparent border-none focus:ring-0 text-xl py-3 text-left tracking-[0.2em] font-display text-slate-900 placeholder:text-slate-500"
                 dir="ltr"
                 placeholder="۰۹---------"
                 type="tel"
+                inputMode="numeric"
+                maxLength={11}
+                value={phone}
+                onChange={handlePhoneChange}
               />
             </div>
           </div>
@@ -44,31 +71,31 @@ function OtpLoginPage() {
         </div>
         <div className="relative my-12">
           <div aria-hidden="true" className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-white/10" />
+            <div className="w-full border-t border-slate-200" />
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-4 bg-background-dark text-slate-500">کد تایید ۴ رقمی</span>
+            <span className="px-4 bg-background-light text-slate-500">کد تایید ۴ رقمی</span>
           </div>
         </div>
         <div className="space-y-8">
           <div className="flex justify-center gap-4" dir="ltr">
             <input
-              className="otp-input w-16 h-16 bg-white/5 border-2 border-primary/30 rounded-xl text-2xl font-bold text-white shadow-neon-orange focus:border-primary focus:ring-0 transition-all"
+              className="otp-input w-16 h-16 neo-surface-inset border border-slate-200 rounded-xl text-2xl font-bold text-slate-900 focus:border-primary focus:ring-0 transition-all"
               maxLength={1}
               type="text"
             />
             <input
-              className="otp-input w-16 h-16 bg-white/5 border border-white/10 rounded-xl text-2xl font-bold text-white focus:border-neon-purple focus:ring-0 transition-all"
+              className="otp-input w-16 h-16 neo-surface-inset border border-slate-200 rounded-xl text-2xl font-bold text-slate-900 focus:border-primary focus:ring-0 transition-all"
               maxLength={1}
               type="text"
             />
             <input
-              className="otp-input w-16 h-16 bg-white/5 border border-white/10 rounded-xl text-2xl font-bold text-white focus:border-neon-purple focus:ring-0 transition-all"
+              className="otp-input w-16 h-16 neo-surface-inset border border-slate-200 rounded-xl text-2xl font-bold text-slate-900 focus:border-primary focus:ring-0 transition-all"
               maxLength={1}
               type="text"
             />
             <input
-              className="otp-input w-16 h-16 bg-white/5 border border-white/10 rounded-xl text-2xl font-bold text-white focus:border-neon-purple focus:ring-0 transition-all"
+              className="otp-input w-16 h-16 neo-surface-inset border border-slate-200 rounded-xl text-2xl font-bold text-slate-900 focus:border-primary focus:ring-0 transition-all"
               maxLength={1}
               type="text"
             />

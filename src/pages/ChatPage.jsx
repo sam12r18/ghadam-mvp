@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 
 function ChatPageLegacy() {
   return (
-    <div className="bg-background-light dark:bg-background-dark text-white overflow-hidden">
-      <div className="relative flex h-screen w-full flex-col bg-background-dark shadow-2xl overflow-hidden border-x border-primary/10">
+    <div className="bg-background-light text-slate-900 overflow-hidden">
+      <div className="relative flex h-screen w-full flex-col bg-background-light shadow-xl overflow-hidden border-x border-slate-100">
         <div className="flex items-center justify-between px-6 pt-4 pb-2 text-xs font-bold">
-          <span className="font-display">9:41</span>
+          <span className="font-display text-slate-600">9:41</span>
           <div className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
             <span className="material-symbols-outlined text-[16px]">wifi</span>
@@ -13,10 +13,10 @@ function ChatPageLegacy() {
           </div>
         </div>
         <div className="flex items-center px-4 py-2 justify-between">
-          <button className="text-white/60 p-2">
+          <button className="text-slate-500 p-2">
             <span className="material-symbols-outlined">arrow_forward_ios</span>
           </button>
-          <h2 className="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">
+          <h2 className="text-slate-900 text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">
             راه‌اندازی حساب کاربری
           </h2>
           <div className="w-10" />
@@ -99,7 +99,7 @@ function ChatPageLegacy() {
           </div>
         </div>
         <div className="glass-panel p-4 pb-2">
-          <div className="flex items-center gap-3 bg-white/5 rounded-xl border border-white/10 px-4 h-12">
+          <div className="flex items-center gap-3 rounded-xl border border-slate-200 px-4 h-12">
             <button className="text-accent-orange">
               <span className="material-symbols-outlined">add_circle</span>
             </button>
@@ -396,7 +396,7 @@ function ChatPage() {
               <div key={message.id} className="flex items-start gap-3 max-w-[85%] self-start">
                 <div className="relative shrink-0">
                   <div className="size-10 rounded-full bg-gradient-to-br from-primary to-purple-400 p-[2px] neon-glow-purple">
-                    <div className="bg-background-dark rounded-full w-full h-full flex items-center justify-center overflow-hidden">
+                    <div className="bg-background-light rounded-full w-full h-full flex items-center justify-center overflow-hidden">
                       <img
                         className="w-full h-full object-cover"
                         data-alt="AI smart coach avatar with neon glow"
@@ -409,7 +409,7 @@ function ChatPage() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-[11px] text-primary font-medium mr-2">مربی هوشمند</span>
-                  <div className="bg-primary/20 border border-primary/30 text-white p-4 rounded-2xl rounded-tr-none neon-glow-purple">
+                  <div className="bg-primary/10 border border-primary/30 text-slate-900 p-4 rounded-2xl rounded-tr-none">
                     <p className="text-sm leading-relaxed">{message.text}</p>
                   </div>
                 </div>
@@ -418,7 +418,7 @@ function ChatPage() {
               <div key={message.id} className="flex items-start gap-3 max-w-[85%] self-end flex-row-reverse">
                 <div className="shrink-0">
                   <div className="size-10 rounded-full bg-gradient-to-br from-accent-orange to-orange-400 p-[2px] neon-glow-orange">
-                    <div className="bg-background-dark rounded-full w-full h-full flex items-center justify-center overflow-hidden">
+                    <div className="bg-background-light rounded-full w-full h-full flex items-center justify-center overflow-hidden">
                       <img
                         className="w-full h-full object-cover"
                         data-alt="User profile avatar placeholder"
@@ -430,7 +430,7 @@ function ChatPage() {
                 </div>
                 <div className="flex flex-col gap-1 items-end">
                   <span className="text-[11px] text-primary font-medium ml-2">شما</span>
-                  <div className="bg-primary text-white font-bold p-4 rounded-2xl rounded-tl-none neon-glow-orange neo-surface-sm">
+                  <div className="bg-primary text-white font-bold p-4 rounded-2xl rounded-tl-none neon-glow-orange">
                     <p className="text-sm leading-relaxed">{message.text}</p>
                   </div>
                 </div>
@@ -478,11 +478,11 @@ function ChatPage() {
               </>
             ) : (
               <>
-                <button className="text-accent-orange" type="button">
+                <button className="text-primary" type="button">
                   <span className="material-symbols-outlined">add_circle</span>
                 </button>
                 <input
-                  className="bg-transparent border-none focus:ring-0 text-sm flex-1 placeholder:text-white/20 text-white"
+                  className="bg-transparent border-none focus:ring-0 text-sm flex-1 placeholder:text-slate-400 text-slate-900"
                   placeholder={getInputPlaceholder()}
                   type="text"
                   value={inputValue}
