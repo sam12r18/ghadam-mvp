@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Bold.woff2')
+    format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --color-bg-main: #f3f4f6;
+  --color-bg-surface: #ffffff;
+  --color-bg-soft: #e5e7eb;
+
+  --color-primary: #ff8c00;
+  --color-accent-mint: #00c896;
+
+  --color-text-main: #1f2933;
+  --color-text-muted: #6b7280;
+
+  --shadow-soft: 8px 8px 16px rgba(15, 23, 42, 0.16), -8px -8px 16px rgba(255, 255, 255, 0.9);
+  --shadow-soft-sm: 4px 4px 8px rgba(15, 23, 42, 0.12), -4px -4px 8px rgba(255, 255, 255, 0.9);
+  --shadow-soft-inset: inset 4px 4px 8px rgba(15, 23, 42, 0.12), inset -4px -4px 8px rgba(255, 255, 255, 1);
+}
+
+body {
+  font-family: 'Vazirmatn', 'Space Grotesk', system-ui, sans-serif;
+  min-height: max(884px, 100dvh);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 15px rgba(140, 37, 244, 0.4);
+}
+
+.neon-glow-orange {
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.4), 0 0 30px rgba(255, 140, 0, 0.2);
+}
+
+.glass-panel {
+  background: rgba(25, 16, 34, 0.8);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(140, 37, 244, 0.2);
+}
+
+.ios-keyboard-bg {
+  background: #1c1c1e;
+}
+
+.ios-key {
+  background: #3a3a3c;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.step-ring {
+  background: conic-gradient(#f27f0d 65%, transparent 0);
+}
+
+.glass-nav {
+  background: rgba(26, 11, 46, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.bg-mesh-onboarding {
+  background-image: radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(244, 123, 37, 0.1) 0px, transparent 50%);
+}
+
+.bg-mesh-login {
+  background-image: radial-gradient(at 0% 0%, rgba(242, 108, 13, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(244, 123, 37, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+.neon-glow-border {
+  border: 1px solid rgba(242, 108, 13, 0.5);
+  box-shadow: 0 0 10px rgba(242, 108, 13, 0.2);
+}
+
+:root {
+  --color-bg-main: #f3f4f6;
+  --color-bg-surface: #ffffff;
+  --color-bg-soft: #e5e7eb;
+
+  --color-primary: #ff8c00;
+  --color-accent-mint: #00c896;
+
+  --color-text-main: #1f2933;
+  --color-text-muted: #6b7280;
+
+  --shadow-soft: 8px 8px 16px rgba(15, 23, 42, 0.16), -8px -8px 16px rgba(255, 255, 255, 0.9);
+  --shadow-soft-sm: 4px 4px 8px rgba(15, 23, 42, 0.12), -4px -4px 8px rgba(255, 255, 255, 0.9);
+  --shadow-soft-inset: inset 4px 4px 8px rgba(15, 23, 42, 0.12), inset -4px -4px 8px rgba(255, 255, 255, 1);
+}
+
+body {
+  font-family: 'Vazirmatn', 'Space Grotesk', system-ui, sans-serif;
+  min-height: max(884px, 100dvh);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.border-primary {
+  border-color: var(--color-primary) !important;
+}
+
+.bg-secondary-neon {
+  background-color: var(--color-accent-mint) !important;
+}
+
+.text-accent-mint {
+  color: var(--color-accent-mint) !important;
+}
+
+.bg-background-dark {
+  background-color: var(--color-bg-main) !important;
+}
+
+.bg-background-light {
+  background-color: var(--color-bg-surface) !important;
+}
+
+.neo-surface {
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-soft);
+  border-radius: 1rem;
+}
+
+.neo-surface-sm {
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-soft-sm);
+  border-radius: 0.75rem;
+}
+
+.neo-surface-inset {
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--shadow-soft-inset);
+  border-radius: 0.75rem;
+}
+
+.neo-button-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(255, 140, 0, 0.35);
+}
+
+.neo-button-primary:active {
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.25);
+  transform: translateY(1px);
+}
+
+.neo-card {
+  background-color: var(--color-bg-surface);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.neo-nav {
+  background-color: var(--color-bg-surface);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft-sm);
+}
+
+.neon-glow-purple {
+  box-shadow: 0 0 18px rgba(0, 200, 150, 0.2);
+}
+
+.neon-glow-orange {
+  box-shadow: 0 0 18px rgba(255, 140, 0, 0.35), 0 0 36px rgba(255, 140, 0, 0.2);
+}
+
+.neon-glow {
+  box-shadow: 0 0 22px rgba(255, 140, 0, 0.35), 0 0 44px rgba(0, 200, 150, 0.25);
+}
+
+.neon-glow-border {
+  border: 1px solid rgba(255, 140, 0, 0.5);
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.25);
+}
+
+.glass-panel {
+  background: var(--color-bg-surface);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow-soft-sm);
+}
+
+.ios-keyboard-bg {
+  background: #f1f5f9;
+}
+
+.ios-key {
+  background: #e5e7eb;
+  box-shadow: var(--shadow-soft-inset);
+}
+
+.step-ring {
+  background: conic-gradient(var(--color-primary) 65%, transparent 0);
+}
+
+.glass-nav {
+  background: var(--color-bg-surface);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft-sm);
+}
+
+.bg-mesh-onboarding {
+  background-image: radial-gradient(at 0% 0%, rgba(0, 200, 150, 0.14) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.16) 0px, transparent 55%);
+}
+
+.bg-mesh-login {
+  background-image: radial-gradient(at 0% 0%, rgba(255, 140, 0, 0.14) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, rgba(0, 200, 150, 0.14) 0px, transparent 55%);
+}
+
