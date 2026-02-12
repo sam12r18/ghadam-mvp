@@ -11,7 +11,7 @@ body {
     padding: 20px;       /* فاصله داخلی */
     box-shadow: 5px 5px 15px rgba(0,0,0,0.15),
     -5px -5px 15px rgba(255,255,255,0.7);
-    width: 100%;         /* عرض کامل */
+    /*width: 100%;         !* عرض کامل *!*/
     max-width: 100%;     /* جلوگیری از کوچک شدن */
     box-sizing: border-box; /* شامل padding در عرض */
     margin: 20px; /* فاصله با جدول */

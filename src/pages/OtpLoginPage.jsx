@@ -26,14 +26,14 @@ function OtpLoginPage() {
     setPhone(value);
   };
   return (
-    <div className="bg-background-light text-slate-900 min-h-screen flex flex-col font-display">
+    <div className="bg-mesh-login text-slate-900 min-h-screen flex flex-col font-display">
       <div className="flex items-center justify-end p-6 pt-12">
-        <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-          <span className="material-symbols-outlined text-white">chevron_right</span>
+        <button className="w-10 h-10 flex items-center justify-center rounded-full neumorphic-btn">
+          <span className="material-symbols-outlined text-back">chevron_right</span>
         </button>
-        <div className="w-10 h-10" />
+        {/*<div className="w-10 h-10" />*/}
       </div>
-      <div className="flex-1 px-8 pb-12 bg-mesh-login">
+      <div className="flex-1 px-8 pb-12 ">
         <div className="mt-8 mb-12 ">
           <div className='flex justify-end'>
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/20 mb-6 shadow-neon-orange border border-primary/30">

@@ -4,8 +4,8 @@ function WelcomeOnboardingPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-background-dark text-white transition-colors duration-300">
-      <div className="relative flex min-h-screen w-full flex-col overflow-hidden bg-mesh-onboarding">
+    <div className="">
+      <div className="relative flex min-h-screen w-full flex-col overflow-hidden">
         <div className="h-12 w-full" />
         <div className="flex items-center px-6 py-2 justify-end">
           <button className="flex items-center justify-center rounded-full bg-white/10 p-2 backdrop-blur-md">
@@ -52,19 +52,19 @@ function WelcomeOnboardingPage() {
         </div>
         <div className="w-full px-6 pb-12 pt-4">
           <button
-            className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-xl py-5 rounded-full shadow-[0_10px_30px_rgba(244,123,37,0.3)] transition-all active:scale-95 flex items-center justify-center gap-3"
+            className="neumorphic-btn w-full bg-primary hover:bg-primary/90 text-white font-bold text-xl py-5 rounded-full shadow-[0_10px_30px_rgba(244,123,37,0.3)] transition-all active:scale-95 flex items-center justify-center gap-3"
             type="button"
             onClick={() => navigate('/login')}
           >
             <span className="material-symbols-outlined text-2xl ">arrow_back</span>
             <span>شروع کنید</span>
           </button>
-          <p className="text-center mt-6 text-white/40 text-sm">
-            قبلاً عضو شده‌اید؟{' '}
-            <a className="text-primary hover:text-primary/80 transition-colors underline underline-offset-4" href="#">
-              وارد شوید
-            </a>
-          </p>
+          {/*<p className="text-center mt-6 text-white/40 text-sm">*/}
+          {/*  قبلاً عضو شده‌اید؟{' '}*/}
+          {/*  <a className="text-primary hover:text-primary/80 transition-colors underline underline-offset-4" href="#">*/}
+          {/*    وارد شوید*/}
+          {/*  </a>*/}
+          {/*</p>*/}
         </div>
         <div
           className="absolute bottom-0 left-0 w-full h-64 opacity-10 pointer-events-none grayscale invert"

@@ -8,7 +8,7 @@ import ChatPage from './pages/ChatPage';
 
 function App() {
   return (
-    <div className="w-full min-h-screen flex justify-center bg-background-dark">
+    <div className="w-full min-h-screen flex justify-center duration-300">
       <div className="w-full max-w-[448px] mx-auto">
         <Routes>
           <Route path="/" element={<WelcomeOnboardingPage />} />
